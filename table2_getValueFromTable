@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table2</title>
+</head>
+<style>
+    table{
+        background-color: antiquewhite;
+        border: tan;
+        border: 3px;
+
+    }
+</style>
+<body>
+    <h2>Get Elements Form the Table</h2>
+    <table id="table" border="3">
+        <tr>
+            <td>Raj</td>
+            <td>Project Manager</td>
+        </tr>
+        <tr>
+            <td>Arun</td>
+            <td>Project Leader</td>
+        </tr>
+
+        <tr>
+            <td>Aakash</td>
+            <td>Team Leader</td>
+        </tr>
+        <tr>
+            <td>Athiban</td>
+            <td>Module Leader</td>
+        </tr>
+        <tr>
+            <td>Gowtham</td>
+            <td>Senior Engineer</td>
+        </tr>
+        <tr>
+            <td>Babu</td>
+            <td>Project Trainee</td>
+        </tr>
+        <tr>
+            <td>HariHaran</td>
+            <td>Quality Analyst</td>
+        </tr>
+        <tr>
+            <td>JeyaKumar</td>
+            <td>Architect</td>
+        </tr>
+    </table><br>
+
+    <script>
+
+        var table = document.getElementById('table');
+
+        for (var i = 1; i < table.rows.length; i++) {
+            table.rows[i].onclick = function () {
+                document.getElementById("Name").value = this.cells[0].innerHTML;
+                document.getElementById("Role").value = this.cells[1].innerHTML;
+            };
+        }
+    </script>
+
+    <input type="text" name="Name" id="Name"><input type="text" name="Role" id="Role">
+    
+
+</body>
+
+</html>
